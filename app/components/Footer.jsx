@@ -9,13 +9,13 @@ const Footer = () => {
       <div className="container p-10 flex justify-between">
         <span>Copyrights &copy; {new Date().getFullYear()}, Nishan_Dangal</span>
   
-         <Link href="/about">
+         <Link href="#about">
              <button className=" hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">About</button>
          </Link>
-         <Link href="/projects">
+         <Link href="#projects">
              <button className=" hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">Projects</button>
          </Link>
-         <Link href="/contact">
+         <Link href="#contact">
              <button className=" hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">Contact</button>
          </Link>
          <button 
