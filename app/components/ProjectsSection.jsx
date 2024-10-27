@@ -1,128 +1,115 @@
-"use client";
-import React, { useState, useRef } from "react";
-import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+'use client';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Image from 'next/image';
 
-const projectsData = [
+// interface Project {
+//   id: number
+//   title: string
+//   description: string
+//   image: string
+//   category: string
+//   githubLink: string
+//   demoLink: string
+// }
+
+const projects = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    description: "A responsive portfolio website built with React and Next.js",
+    image: "/images/react-portfolio.jpg",
+    category: "Web",
+    githubLink: "https://github.com/yourusername/react-portfolio",
+    demoLink: "https://react-portfolio-demo.vercel.app"
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "Photography Portfolio Website",
+    description: "A sleek photography portfolio showcasing various projects",
+    image: "/images/photography-portfolio.jpg",
+    category: "Web",
+    githubLink: "https://github.com/yourusername/photography-portfolio",
+    demoLink: "https://photography-portfolio-demo.netlify.app"
   },
   {
     id: 3,
     title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    description: "A full-stack e-commerce solution with product management and secure checkout",
+    image: "/images/ecommerce-app.jpg",
+    category: "Backend Microprojects",
+    githubLink: "https://github.com/yourusername/ecommerce-app",
+    demoLink: "https://ecommerce-app-demo.herokuapp.com"
   },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-];
+]
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const [filter, setFilter] = useState('All')
 
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
-
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
-
-  const cardVariants = {
-    initial: { y: 50, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-  };
+  const filteredProjects = filter === 'All' 
+    ? projects 
+    : projects.filter(project => project.category === filter)
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Backend Microprojects"
-          isSelected={tag === "Backend Microprojects"}
-        />
-      </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
+    <section id="projects" className="py-20 bg-gray-900">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center text-white mb-8">My Projects</h2>
+        <div className="flex justify-center space-x-4 mb-8">
+          {['All', 'Web', 'Backend Microprojects'].map((category) => (
+            <button
+              key={category}
+              onClick={() => setFilter(category)}
+              className={`px-4 py-2 rounded-full ${
+                filter === category
+                  ? 'bg-white text-gray-900'
+                  : 'bg-gray-800 text-white'
+              } transition-colors duration-300`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project) => (
+            <motion.div
               key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
-      </ul>
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+            >
+              <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                <div className="flex justify-between">
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    <FaGithub className="mr-2" />
+                    GitHub
+                  </a>
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-green-400 hover:text-green-300 transition-colors"
+                  >
+                    <FaExternalLinkAlt className="mr-2" />
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
     </section>
-  );
-};
+  )
+}
 
 export default ProjectsSection;
