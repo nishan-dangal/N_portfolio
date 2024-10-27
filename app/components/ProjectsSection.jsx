@@ -61,7 +61,7 @@ const ProjectsSection = () => {
     : projects.filter(project => project.category === filter)
 
   return (
-    <section id="projects" className="py-20 bg-gray-900">
+    <section id="projects" className="py-20 bg-[#119ab586]"> 
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-8">My Projects</h2>
         <div className="flex justify-center space-x-4 mb-8">
