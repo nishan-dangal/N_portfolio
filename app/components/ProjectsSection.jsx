@@ -26,11 +26,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "Photography Portfolio Website",
-    description: "A sleek photography portfolio showcasing various projects",
+    title: "Timestamp Microservice",
+    description: "Build a simple API that converts a date string or timestamp into two formats: Unix timestamp and UTC date string.",
     image: "/images/photography-portfolio.jpg",
-    category: "Web",
-    githubLink: "https://github.com/yourusername/photography-portfolio",
+    category: "Backend Microprojects",
+    githubLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
     demoLink: "https://photography-portfolio-demo.netlify.app"
   },
   {
@@ -38,9 +38,18 @@ const projects = [
     title: "E-commerce Application",
     description: "A full-stack e-commerce solution with product management and secure checkout",
     image: "/images/ecommerce-app.jpg",
-    category: "Backend Microprojects",
+    category: "Web",
     githubLink: "https://github.com/yourusername/ecommerce-app",
     demoLink: "https://ecommerce-app-demo.herokuapp.com"
+  },
+  {
+    id: 4,
+    title: "Request Header Parser",
+    description: " Build a simple API that reads information from incoming HTTP request headers and return IP Address, Language, Software/Browser Information in a JSON object notation",
+    image: "/images/photography-portfolio.jpg",
+    category: "Backend Microprojects",
+    githubLink: "https://github.com/nishan-dangal/Request-header-parser",
+    demoLink: "https://github.com/nishan-dangal/Request-header-parser"
   },
 ]
 
