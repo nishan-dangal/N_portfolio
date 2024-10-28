@@ -19,7 +19,7 @@ const projects = [
     id: 1,
     title: "React Portfolio Website",
     description: "A responsive portfolio website built with React and Next.js",
-    image: "/images/react-portfolio.jpg",
+    image: "/images/timestamp.jpeg",
     category: "Web",
     githubLink: "https://github.com/yourusername/react-portfolio",
     demoLink: "https://react-portfolio-demo.vercel.app"
