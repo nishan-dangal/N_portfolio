@@ -19,7 +19,7 @@ const projects = [
     id: 1,
     title: "React Portfolio Website",
     description: "A responsive portfolio website built with React and Next.js",
-    image: "/images/timestamp.jpeg",
+    image: "/images/hello.png",
     category: "Web",
     githubLink: "https://github.com/yourusername/react-portfolio",
     demoLink: "https://react-portfolio-demo.vercel.app"
@@ -28,7 +28,7 @@ const projects = [
     id: 2,
     title: "Timestamp Microservice",
     description: "Build a simple API that converts a date string or timestamp into two formats: Unix timestamp and UTC date string.",
-    image: "/images/photography-portfolio.jpg",
+    image: "/images/timestamp.jpeg",
     category: "Backend Microprojects",
     githubLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
     demoLink: "https://photography-portfolio-demo.netlify.app"
@@ -88,7 +88,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5 }}
               className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
             >
-              <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" width={30} height={30} />
+              <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" objectFit="cover" quality={100}  width={30} height={30} />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>
