@@ -31,7 +31,7 @@ const projects = [
     image: "/images/timestamp.jpeg",
     category: "Backend Microprojects",
     githubLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
-    demoLink: "https://photography-portfolio-demo.netlify.app"
+    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice"
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const projects = [
     image: "/images/ecommerce-app.jpg",
     category: "Web",
     githubLink: "https://github.com/yourusername/ecommerce-app",
-    demoLink: "https://ecommerce-app-demo.herokuapp.com"
+    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice"
   },
   {
     id: 4,
@@ -88,7 +88,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5 }}
               className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
             >
-              <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" objectFit="cover" quality={100}  width={30} height={30} />
+              <Image src={project.image} alt={project.title} className="w-full h-48 object-cover" quality={100} objectFit="cover" width={30} height={30} />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>
