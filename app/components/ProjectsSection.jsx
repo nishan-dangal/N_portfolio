@@ -35,7 +35,7 @@ const projects = [
     category: "Web",
     githubLink: "https://github.com/yourusername/ecommerce-app",
     demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
-    languages: ['html5','css3','javascript','paypal']
+    languages: ['html','css','javascript','paypal']
   },
   {
     id: 4,
