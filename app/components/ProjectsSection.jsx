@@ -1,18 +1,10 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaHtml5, FaCss3,FaPaypal } from 'react-icons/fa';
+import { SiJavascript, SiTypescript, SiNextdotjs, SiExpress } from 'react-icons/si';
 import Image from 'next/image';
 
-// interface Project {
-//   id: number
-//   title: string
-//   description: string
-//   image: string
-//   category: string
-//   githubLink: string
-//   demoLink: string
-// }
 
 const projects = [
   {
@@ -22,7 +14,8 @@ const projects = [
     image: "/images/hello.png",
     category: "Web",
     githubLink: "https://github.com/yourusername/react-portfolio",
-    demoLink: "https://react-portfolio-demo.vercel.app"
+    demoLink: "https://react-portfolio-demo.vercel.app",
+    languages: ['react','nextjs','typescript']
   },
   {
     id: 2,
@@ -31,7 +24,8 @@ const projects = [
     image: "/images/timestamp.jpeg",
     category: "Backend Microprojects",
     githubLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
-    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice"
+    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
+    languages: ['javascript','nodejs','express']
   },
   {
     id: 3,
@@ -40,7 +34,8 @@ const projects = [
     image: "/images/ecommerce-app.jpg",
     category: "Web",
     githubLink: "https://github.com/yourusername/ecommerce-app",
-    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice"
+    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
+    languages: ['html5','css3','javascript','paypal']
   },
   {
     id: 4,
@@ -49,9 +44,23 @@ const projects = [
     image: "/images/photography-portfolio.jpg",
     category: "Backend Microprojects",
     githubLink: "https://github.com/nishan-dangal/Request-header-parser",
-    demoLink: "https://github.com/nishan-dangal/Request-header-parser"
+    demoLink: "https://github.com/nishan-dangal/Request-header-parser",
+    languages: ['javascript','nodejs','express']
   },
 ]
+
+
+const languageIcons = {
+  react: FaReact,
+  nodejs: FaNodeJs,
+  javascript: SiJavascript,
+  typescript: SiTypescript,
+  html: FaHtml5,
+  css: FaCss3,
+  nextjs: SiNextdotjs,
+  express: SiExpress,
+  paypal: FaPaypal
+};
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState('All')
@@ -92,6 +101,15 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>
+                <div className="flex justify-center mb-4">
+                    {project.languages.map((lang) => {
+                      const Icon = languageIcons[lang];
+                      return Icon ? (
+                        <Icon key={lang} className="text-2xl mx-1 text-gray-300" title={lang} />
+                      ) : null;
+                    })}
+                  </div>
+                  <br></br>
                 <div className="flex justify-between">
                   <a
                     href={project.githubLink}
