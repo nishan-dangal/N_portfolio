@@ -9,26 +9,6 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "A responsive portfolio website built with React and Next.js",
-    image: "/images/react.jpeg",
-    category: "Web",
-    githubLink: "https://github.com/yourusername/react-portfolio",
-    demoLink: "https://react-portfolio-demo.vercel.app",
-    languages: ['react','nextjs','typescript']
-  },
-  {
-    id: 2,
-    title: "Timestamp Microservice",
-    description: "Build a simple API that converts a date string or timestamp into two formats: Unix timestamp and UTC date string.",
-    image: "/images/timestamp.jpeg",
-    category: "Backend Microprojects",
-    githubLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
-    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
-    languages: ['javascript','nodejs','express']
-  },
-  {
-    id: 3,
     title: "E-commerce Application",
     description: "A full-stack e-commerce solution with product management and secure checkout",
     image: "/images/e-commerce.jpeg",
@@ -37,6 +17,36 @@ const projects = [
     demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
     languages: ['html','css','javascript','paypal']
   },
+  {
+    id: 2,
+    title: "Leo Service Cleaning Business",
+    description: "A small business that offers cleaning servics built with using Hmtl, Css and Havascript",
+    image: "/images/leoservice.jpeg",
+    category: "Web",
+    githubLink: "https://github.com/nishan-dangal/leoservice",
+    demoLink: "https://leoservice.netlify.app/",
+    languages: ['html','css','javascript']
+  },
+  {
+    id: 3,
+    title: "Timestamp Microservice",
+    description: "Build a simple API that converts a date string or timestamp into two formats: Unix timestamp and UTC date string.",
+    image: "/images/timestamp.jpeg",
+    category: "Backend Microprojects",
+    githubLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
+    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
+    languages: ['javascript','nodejs','express']
+  },
+  // {
+  //   id: 3,
+  //   title: "E-commerce Application",
+  //   description: "A full-stack e-commerce solution with product management and secure checkout",
+  //   image: "/images/e-commerce.jpeg",
+  //   category: "Web",
+  //   githubLink: "https://github.com/yourusername/ecommerce-app",
+  //   demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
+  //   languages: ['html','css','javascript','paypal']
+  // },
   {
     id: 4,
     title: "Request Header Parser",
