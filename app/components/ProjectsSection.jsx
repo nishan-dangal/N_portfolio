@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaHtml5, FaCss3,FaPaypal } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaHtml5, FaCss3,FaPaypal, FaPhp } from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiNextdotjs, SiExpress } from 'react-icons/si';
 import Image from 'next/image';
 
@@ -9,13 +9,13 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
-    title: "E-commerce Application",
+    title: "E-commerce Website",
     description: "A full-stack e-commerce solution with product management and secure checkout",
-    image: "/images/e-commerce.jpeg",
+    image: "/images/serenehandicraft.jpeg",
     category: "Web",
-    githubLink: "https://github.com/yourusername/ecommerce-app",
-    demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
-    languages: ['html','css','javascript','paypal']
+    githubLink: "https://github.com/nishan-dangal/E-commerce",
+    demoLink: "https://serenehandicraft.netlify.app/",
+    languages: ['html','css','javascript','paypal','php']
   },
   {
     id: 2,
@@ -37,16 +37,6 @@ const projects = [
     demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
     languages: ['javascript','nodejs','express']
   },
-  // {
-  //   id: 3,
-  //   title: "E-commerce Application",
-  //   description: "A full-stack e-commerce solution with product management and secure checkout",
-  //   image: "/images/e-commerce.jpeg",
-  //   category: "Web",
-  //   githubLink: "https://github.com/yourusername/ecommerce-app",
-  //   demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
-  //   languages: ['html','css','javascript','paypal']
-  // },
   {
     id: 4,
     title: "Request Header Parser",
@@ -69,7 +59,8 @@ const languageIcons = {
   css: FaCss3,
   nextjs: SiNextdotjs,
   express: SiExpress,
-  paypal: FaPaypal
+  paypal: FaPaypal,
+  php: FaPhp
 };
 
 const ProjectsSection = () => {
