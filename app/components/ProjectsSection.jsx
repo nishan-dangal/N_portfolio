@@ -41,7 +41,7 @@ const projects = [
     id: 4,
     title: "Request Header Parser",
     description: " Build a simple API that reads information from incoming HTTP request headers and return IP Address, Language, Software/Browser Information in a JSON object notation",
-    image: "/images/e-commerce.jpeg",
+    image: "/images/request-header-parser.jpeg",
     category: "Backend Microprojects",
     githubLink: "https://github.com/nishan-dangal/Request-header-parser",
     demoLink: "https://github.com/nishan-dangal/Request-header-parser",
