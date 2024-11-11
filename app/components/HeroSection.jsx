@@ -5,6 +5,12 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+import GithubIcon from "../../public/github-icon.svg";
+import LinkedinIcon from "../../public/linkedin-icon.svg";
+import TwitterIcon from "../../public/twitter-icon.svg";
+import InstagramIcon from "../../public/instagram-icon.svg";
+
+
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -41,7 +47,7 @@ const HeroSection = () => {
               href="/#contact"
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-purple-500 to-blue-500 hover:bg-slate-800 text-white"
             >
-              Hire Me
+              Contact Info
             </Link>
             <a href="/resume.pdf" target="_blank" rel="nopener noreferrer"
             className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-blue-500 hover:bg-blue-200 text-white mt-3"
@@ -51,6 +57,21 @@ const HeroSection = () => {
                </span>
             </a>
           </div>
+          <br></br>
+          <div className="socials flex flex-row gap-2">
+          <Link href="https://github.com/nishan-dangal"  target="_blank" rel="noopener noreferrer">
+            <Image src={GithubIcon} alt="Github Icon" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/nishan-dangal-2aa87317a/"  target="_blank" rel="noopener noreferrer">
+            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          </Link>
+          <Link href="https://x.com/nishandangal8"  target="_blank" rel="noopener noreferrer">
+            <Image src={TwitterIcon} alt="Twitter Icon" />
+          </Link>
+          <Link href="https://www.instagram.com/nishan.dangal_/"  target="_blank" rel="noopener noreferrer">
+            <Image src={InstagramIcon} alt="Instagram Icon" />
+          </Link>
+        </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
