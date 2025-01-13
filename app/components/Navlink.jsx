@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import MenuOverlay from "./MenuOverlay";
 import Navbar from "./Navbar";
