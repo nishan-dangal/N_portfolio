@@ -3,9 +3,9 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
-import NavLink from "./NavLink";
+import TopLink from "./TopLink";
 
-const navLinks = [
+const topLinks = [
   {
     title: "About",
     path: "#about",
@@ -21,7 +21,7 @@ const navLinks = [
 ];
 
 export const TopBar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [topbarOpen, setTopbarOpen] = useState(false);
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
@@ -33,16 +33,16 @@ export const TopBar = () => {
           My-Portfolio
         </Link>
         <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
+          {!topbarOpen ? (
             <button
-              onClick={() => setNavbarOpen(true)}
+              onClick={() => setTopbarOpen(true)}
               className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
             >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
             <button
-              onClick={() => setNavbarOpen(false)}
+              onClick={() => setTopbarOpen(false)}
               className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
             >
               <XMarkIcon className="h-5 w-5" />
@@ -51,15 +51,15 @@ export const TopBar = () => {
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
+            {topLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <TopLink href={link.path} title={link.title} />
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {topbarOpen ? <MenuOverlay links={topLinks} /> : null}
     </nav>
   );
 };

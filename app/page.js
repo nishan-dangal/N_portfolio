@@ -5,7 +5,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import SkillsSection from "./components/SkillsSection";
-import NavLink from "./components/NavLink";
+import TopLink from "./components/TopLink";
 
 export default function Home() {
   return (
