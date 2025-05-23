@@ -2,6 +2,7 @@
 import Link from "next/link";
 // import NavBar from "./NavBar";
 import MenuOverlay from "./MenuOverlay";
+import TopBar from "./TopBar";
 
 const NavLink = ({ href, title }) => {
   return (

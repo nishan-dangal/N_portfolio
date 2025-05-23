@@ -20,7 +20,7 @@
 //   },
 // ];
 
-// const NavBar = () => {
+// export const NavBar = () => {
 //   const [navbarOpen, setNavbarOpen] = useState(false);
 
 //   return (
