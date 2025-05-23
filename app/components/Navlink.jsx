@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import NavBar from "./NavBar";
+// import NavBar from "./NavBar";
 import MenuOverlay from "./MenuOverlay";
 
 const NavLink = ({ href, title }) => {
