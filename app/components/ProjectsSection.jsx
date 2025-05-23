@@ -31,7 +31,7 @@ const projects = [
     id: 3,
     title: "Timestamp Microservice",
     description: "Build a simple API that converts a date string or timestamp into two formats: Unix timestamp and UTC date string.",
-    image: "/images/timestamp.jpeg",
+    image: "/images/Timestamp.jpeg",
     category: "Backend Microprojects",
     githubLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
     demoLink: "https://github.com/nishan-dangal/Timestamp-Microservice",
