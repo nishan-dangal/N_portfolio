@@ -20,7 +20,7 @@ const projects = [
   {
     id: 2,
     title: "Leo Service Cleaning Business",
-    description: "A small business that offers cleaning servics built with using Hmtl, Css and Havascript",
+    description: "A small business that offers cleaning servics built with using Hmtl, Css and Javascript",
     image: "/images/leoservice.jpeg",
     category: "Web",
     githubLink: "https://github.com/nishan-dangal/leoservice",
