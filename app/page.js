@@ -1,3 +1,4 @@
+
 import HeroSection from "./components/HeroSection";
 import TopBar from "./components/TopBar";
 import AboutSection from "./components/AboutSection";
@@ -6,6 +7,7 @@ import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 import SkillsSection from "./components/SkillsSection";
 import TopLink from "./components/TopLink";
+import { SplinerView } from "./components/SplinerView";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
         <SkillsSection/>
         <AboutSection />
         <ProjectsSection />
+        <SplinerView />
         <EmailSection />
+
       </div>
       <Footer />
     </main>
